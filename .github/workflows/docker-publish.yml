@@ -12,6 +12,8 @@ on:
     branches: [ main ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
+    branches-ignore:    # <-- Add this list property
+      - '**'            # <-- with '**' to disable all branches
   pull_request:
     branches: [ main ]
 
