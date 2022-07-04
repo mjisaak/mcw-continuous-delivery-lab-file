@@ -1,5 +1,5 @@
 $studentprefix = "676710"
-$githubAccount = "Your github account name here"
+$githubAccount = "mjisaak"
 $resourcegroupName = "fabmedical-rg-" + $studentprefix
 $cosmosDBName = "fabmedical-cdb-" + $studentprefix
 
@@ -10,6 +10,8 @@ $mongodbConnectionString = `
         --resource-group $resourcegroupName `
         --type connection-strings `
         --query 'connectionStrings[0].connectionString')
+
+        write-host $mongodbConnectionString
 
 # Seed CosmosDB database
 docker run -ti `
